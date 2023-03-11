@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { NavigationContainer } from "@react-navigation/native";
+import { NativeBaseProvider } from "native-base";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import "expo-dev-client";
+
+//local imports
+import Navigation from "@Navigation/routes";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <NativeBaseProvider>
+        <NavigationContainer>
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            <Navigation />
+          </GestureHandlerRootView>
+        </NavigationContainer>
+      </NativeBaseProvider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

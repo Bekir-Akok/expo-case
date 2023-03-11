@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ExpoCase",
-    "slug": "ExpoCase",
+    "name": "Video-Case",
+    "slug": "video-case",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,22 +12,43 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/195fd8eb-08c9-4c49-a0b7-eaa76ebe1e47"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "runtimeVersion": {
+        "policy": "sdkVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.bekirakok.videocase",
+      "runtimeVersion": "1.0.0"
     },
+    "plugins": [
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "DEFAULT"
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "195fd8eb-08c9-4c49-a0b7-eaa76ebe1e47"
+      }
+    },
+    "owner": "bekirakok"
   }
 }
